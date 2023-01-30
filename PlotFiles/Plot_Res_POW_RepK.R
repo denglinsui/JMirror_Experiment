@@ -14,8 +14,8 @@ source("PlotFiles/Plot_Tools.R")
 #######========= 
 #######===========================
 
-BigFold.names <- c("Res/Rep_K1_TwoSide_0.01")
 BigFold.names <- c("Res/Rep_K3_TwoSide_0.03")
+BigFold.names <- c("Res/Rep_K1_TwoSide_0.01")
 ## Draw plot
 Res.DF <- NULL
 for(BigFold.name in BigFold.names){

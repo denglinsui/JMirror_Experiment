@@ -101,38 +101,38 @@ print(xtable(OutTable),include.rownames = FALSE)
 
 
 
-## Extract Table for cFDP
+## Extract Table for mFDP
 Res.df$alter_type <- factor(Res.df$alter_type,#levels=c("Global Null","Sparse Null","Dense Null",
                             #        "Sparse Alternative","Dense Alternative"))
                             levels=c("GNull","SNull","DNull",
                                      "SAlter","DAlter"))
-cFDPSummary005Mean <- Res.df %>% filter(Criterion=="AdjFDP") %>% 
+mFDPSummary005Mean <- Res.df %>% filter(Criterion=="AdjFDP") %>% 
   filter(Method %in% c("JM.Max","JM.EmptyPoset","JM.Product","DACT","JS.Mix.Asy","JS.Mix.Finite","MT.Comp")) %>%
   filter(trgt.fdr.level == 0.05) %>%
   dcast(alter_type~Method,value.var="Mean") %>% 
   arrange(alter_type)
 
-cFDPSummary020Mean <-Res.df %>% filter(Criterion=="AdjFDP") %>% 
+mFDPSummary020Mean <-Res.df %>% filter(Criterion=="AdjFDP") %>% 
   filter(Method %in% c("JM.Max","JM.EmptyPoset","JM.Product","DACT","JS.Mix.Asy","JS.Mix.Finite","MT.Comp")) %>%
   filter(trgt.fdr.level == 0.2) %>%
   dcast(alter_type~Method,value.var="Mean") %>% 
   arrange(alter_type)
 
-cFDPSummary005Se <- Res.df %>% filter(Criterion=="AdjFDP") %>% 
+mFDPSummary005Se <- Res.df %>% filter(Criterion=="AdjFDP") %>% 
   filter(Method %in% c("JM.Max","JM.EmptyPoset","JM.Product","DACT","JS.Mix.Asy","JS.Mix.Finite","MT.Comp")) %>%
   filter(trgt.fdr.level == 0.05) %>%
   dcast(alter_type~Method,value.var="SE") %>% 
   arrange(alter_type)
 
-cFDPSummary020Se <-Res.df %>% filter(Criterion=="AdjFDP") %>% 
+mFDPSummary020Se <-Res.df %>% filter(Criterion=="AdjFDP") %>% 
   filter(Method %in% c("JM.Max","JM.EmptyPoset","JM.Product","DACT","JS.Mix.Asy","JS.Mix.Finite","MT.Comp")) %>%
   filter(trgt.fdr.level == 0.2) %>%
   dcast(alter_type~Method,value.var="SE") %>% 
   arrange(alter_type) 
 
-OutTable_cFDP <- SummaryTable(cFDPSummary005Mean,cFDPSummary020Mean,
-                         cFDPSummary005Se,cFDPSummary020Se)
-print(xtable(OutTable_cFDP),include.rownames = FALSE)
+OutTable_mFDP <- SummaryTable(mFDPSummary005Mean,mFDPSummary020Mean,
+                         mFDPSummary005Se,mFDPSummary020Se)
+print(xtable(OutTable_mFDP),include.rownames = FALSE)
 
 
 ## Extract Table for POW

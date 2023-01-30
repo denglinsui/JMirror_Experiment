@@ -2,7 +2,7 @@ set.seed(100)
 
 ## Provide an example showing the performance of our FDP estimator
 ## Including the true false discoviers(FD), FD we estimate, FD conventional joint significant test estimate
-## As well as the composite FD.
+## As well as the modified FD.
 
 library(kernelboot)
 library(ggplot2)
@@ -180,14 +180,14 @@ ggsave("Figure/TheoreticalValueComparison.pdf",height=8,width=7)
 
 
 
-data.plot.cfd <- data.table(`Empirical Number of Composite False Discoveries` = true.emp.cfd1.val,
+data.plot.cfd <- data.table(`Empirical Number of Modified False Discoveries` = true.emp.cfd1.val,
                             `Empirical Number of Controls` = est.emp.fd1.val)
 
 p.plot.cfd <- ggplot()+
-  geom_point(data=data.plot.cfd,aes(x=`Empirical Number of Composite False Discoveries`,
+  geom_point(data=data.plot.cfd,aes(x=`Empirical Number of Modified False Discoveries`,
                                     y=`Empirical Number of Controls`))+
-  geom_line(data=data.plot.cfd,aes(x=`Empirical Number of Composite False Discoveries`,
-                                   y=`Empirical Number of Composite False Discoveries`),color="red")+
+  geom_line(data=data.plot.cfd,aes(x=`Empirical Number of Modified False Discoveries`,
+                                   y=`Empirical Number of Modified False Discoveries`),color="red")+
   theme_bw()+
   theme(#panel.grid.major = element_blank(),
     panel.grid.minor = element_blank(),axis.line = element_line(colour = "black"),

@@ -1,7 +1,7 @@
 ## Additional tools for plot
 
 ylab.change <- function(x){
-  if(x=="AdjFDP"){return("cFDP")}
+  if(x=="AdjFDP"){return("mFDP")}
   if(x=="POW"){return("Percentage of Discoveries")}
   if(x=="FDP"){return("FDP")}
   return(x)
