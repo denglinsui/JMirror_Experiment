@@ -140,10 +140,16 @@ data.plot.theo.df <- data.table(t = thred.seq,
                                 value = c(true.theo.fd1.val,
                                           m*thred.seq*(1-pi.seq[4]),
                                           est.theo.fd1.val),
-                                `Theoretical`= rep(c("Number of False Discoveries",
-                                                     "Number Estimated by Conventional Joint Significant Test",
-                                                     "Number of Controls"),
-                                                   each = length(thred.seq)))
+                                `Theoretical`= factor(rep(c("Number of False Discoveries",
+                                                            #"Number Estimated by Conventional Joint Significant Test",
+                                                            "Number of False Discoveries Estimated by Conventional JS Test",
+                                                            "Number of Controls"),
+                                                          each = length(thred.seq)),
+                                                      levels= c("Number of False Discoveries Estimated by Conventional JS Test",
+                                                                "Number of Controls",
+                                                                "Number of False Discoveries")))
+#"Number Estimated by Conventional Joint Significant Test")))
+
 data.plot.emp.df <- data.table(t = thred.seq,
                                value = c(true.emp.fd1.val,
                                          est.emp.fd1.val),
@@ -156,6 +162,7 @@ p.emp <- ggplot()+
                                        y=value,color=Empirical))+
   geom_line(data=data.plot.theo.df,aes(x=t,
                                        y=value,linetype=Theoretical))+
+  ylab("The Number of False Discoviers and its Estimators")+
   theme_bw()+
   scale_color_manual(values=c("Number of False Discoveries"="#A6CEE3",
                               "Number of Controls"="#FB9A99"))+

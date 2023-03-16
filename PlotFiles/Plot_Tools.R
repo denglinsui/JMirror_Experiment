@@ -2,7 +2,8 @@
 
 ylab.change <- function(x){
   if(x=="AdjFDP"){return("mFDP")}
-  if(x=="POW"){return("Percentage of Discoveries")}
+  #if(x=="POW"){return("Percentage of Discoveries")}
+  if(x=="POW"){return("power")}
   if(x=="FDP"){return("FDP")}
   return(x)
 }
