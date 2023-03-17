@@ -162,7 +162,7 @@ p.emp <- ggplot()+
                                        y=value,color=Empirical))+
   geom_line(data=data.plot.theo.df,aes(x=t,
                                        y=value,linetype=Theoretical))+
-  ylab("The Number of False Discoviers and its Estimators")+
+  ylab("The Number of False Discoviers")+
   theme_bw()+
   scale_color_manual(values=c("Number of False Discoveries"="#A6CEE3",
                               "Number of Controls"="#FB9A99"))+
