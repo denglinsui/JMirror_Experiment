@@ -2,11 +2,11 @@ set.seed(100)
 
 ## Provide an example illustrating the rejection regions.
 
-Rcpp::sourceCpp("~/project/HDMediate/Methods/JointMirror.cpp")
-Rcpp::sourceCpp("~/project/HDMediate/Methods/modules.cpp")
-source("~/project/HDMediate/Methods/loadJointMirror.R", echo=TRUE)
-source("~/project/HDMediate/Methods/Visualize.R", echo=TRUE)
-source("~/project/HDMediate/Methods/JointMirrorR.R", echo=TRUE)
+Rcpp::sourceCpp("Methods/JointMirror.cpp")
+Rcpp::sourceCpp("Methods/modules.cpp")
+source("Methods/loadJointMirror.R", echo=TRUE)
+source("Methods/Visualize.R", echo=TRUE)
+source("Methods/JointMirrorR.R", echo=TRUE)
 
 library(kernelboot)
 library(ggplot2)
