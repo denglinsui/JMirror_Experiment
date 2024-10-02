@@ -1,6 +1,6 @@
 # JMirror_Experiment
 
-This project incorporates the codes for the simulations and real data analysis of "A New FDR Controlling Procedure for Identifying Simultaneous Signals".
+This project incorporates the codes for the simulations and real data analysis of "Joint Mirror Procedure: Controlling False Discovery Rate for Identifying Simultaneous Signals".
 
 ## Simulation
 
