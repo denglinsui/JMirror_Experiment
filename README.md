@@ -27,6 +27,9 @@ bash sh/Simu2_RepK_003.sh &
 * To create Figures 1-2 in the main paper, run `Illustration/IlluTwo.R` and `Illustration/IlluThree.R`.  
 * To create Figures S1 in the supplementary materials, run  `Illustration/IlluFour.R`.  
 
+## Note
+
+* There are some inconsistent captions in this `README.md` and in our paper. I will modify them ASAP.
 
 ## References
 <a id="1">[1]</a> 
