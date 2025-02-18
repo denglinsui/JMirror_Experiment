@@ -13,7 +13,8 @@ bash sh/Simu2_RepK_001.sh &
 bash sh/Simu2_RepK_003.sh &
 ```
 
-* To create Figures 3 to 4 in Section 4 of the main paper, run `PlotFiles/Plot_Res_POW_VaryAlterProp.R` and `PlotFiles/Plot_Res_POW_RepK.R` (Please also modify the root). 
+* To create Figures 4 and 5 in Section 4 of the main paper, run `PlotFiles/Plot_Res_POW_RepK.R` (Please also modify the root). 
+* To create Figure S1 in Section SII of the supplementary materials, run `PlotFiles/Plot_Res_POW_VaryAlterProp.R`. 
 * To create Tables S2-S4 in Section S.IV.2 of the supplementary materials, run `PlotFiles/Plot_Res_POW.R`. 
 
 ## Real Data
@@ -24,12 +25,9 @@ bash sh/Simu2_RepK_003.sh &
 
 ## Other Figures
 
-* To create Figures 1-2 in the main paper, run `Illustration/IlluTwo.R` and `Illustration/IlluThree.R`.  
-* To create Figures S1 in the supplementary materials, run  `Illustration/IlluFour.R`.  
+* To create Figures 2 and 3 in the main paper, run `Illustration/IlluTwo.R` and `Illustration/IlluThree.R`.  
+* To create Figure S2 in the supplementary materials, run  `Illustration/IlluFour.R`.  
 
-## Note
-
-* There are some inconsistent captions in this `README.md` and in our paper. I will modify them ASAP.
 
 ## References
 <a id="1">[1]</a> 
